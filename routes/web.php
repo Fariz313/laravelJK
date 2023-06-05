@@ -12,6 +12,7 @@ use App\Http\Controllers\UserController;
 use App\Models\Province;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\TransactionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,7 +33,7 @@ Route::get('/{province}/{city}/{content}', [HomepageController::class, 'detailCo
 Route::get('/province/{province}', [HomepageController::class, 'getContentProvince'])->name('getContentProvince');
 Route::get('/province', [HomepageController::class,'getProvince'])->name('getProvince');
 Route::get('/result', [HomepageController::class, 'result'])->name('result');
-
+Route::get('/transaction', [TransactionController::class, 'index'])->name('transaksi');
 
 Auth::routes();
 // Route::get('logout', [LoginController::class, 'logout']);
