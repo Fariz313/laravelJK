@@ -16,27 +16,27 @@
                 <tbody>
                     <tr>
                         <th style="width:50%" scope="row">Nama Penginapan</th>
-                        <th scope="col">: Senyum World Hotel</th>
+                        <th scope="col">: {{$tr->penginapanName}}</th>
                     </tr>
                     <tr>
                         <th style="width:50%" scope="row">Lokasi</th>
-                        <th scope="col">: Junrejo, Malang</th>
+                        <th scope="col">: {{$tr->alamat}}</th>
                     </tr>
                     <tr>
                         <th style="width:50%" scope="row">Tanggal Cek In</th>
-                        <th scope="col">: 15/05/2023</th>
+                        <th scope="col">: {{$tr->checkin}}</th>
                     </tr>
                     <tr>
                         <th style="width:50%" scope="row">Tanggal Cek Out</th>
-                        <th scope="col">: 17/05/2023</th>
+                        <th scope="col">: {{$tr->checkout}}</th>
                     </tr>
                     <tr>
                         <th style="width:50%" scope="row">Harga/malam</th>
-                        <th scope="col">: Rp.1.100.000</th>
+                        <th scope="col">: Rp.{{$tr->hargamalam}}</th>
                     </tr>
                     <tr>
                         <th style="width:50%" scope="row"><b>Total Harga</b></th>
-                        <th scope="col"><b>: Rp.2.400.00</b></th>
+                        <th scope="col"><b>: Rp.{{$tr->harga}}</b></th>
                     </tr>
                 </tbody>
             </table>

@@ -33,8 +33,9 @@ Route::get('/{province}/{city}/{content}', [HomepageController::class, 'detailCo
 Route::get('/province/{province}', [HomepageController::class, 'getContentProvince'])->name('getContentProvince');
 Route::get('/province', [HomepageController::class, 'getProvince'])->name('getProvince');
 Route::get('/result', [HomepageController::class, 'result'])->name('result');
-Route::get('/transaction', [TransactionController::class, 'index'])->name('transaksi');
-Route::get('/transaction/details', [TransactionController::class, 'details'])->name('details');
+Route::get('/transaction/{id}', [TransactionController::class, 'index'])->name('transaksi');
+Route::get('/transaction', [TransactionController::class, 'details'])->name('details');
+Route::post('/transaction/store', [TransactionController::class, 'store'])->name('store');
 
 Auth::routes();
 // Route::get('logout', [LoginController::class, 'logout']);
